@@ -161,3 +161,5 @@ SIMPLE_JWT = {
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
 }
+import django_heroku
+django_heroku.settings(locals())
