@@ -26,9 +26,15 @@ SECRET_KEY = 'django-insecure-9@8!mnp*fgz88!g)6cbc-!$l+dy_o0x2jesw)(q^q*jxp^h4pn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [ 'ciclo3-api-backend.herokuapp.com' ]
 # ALLOWED_HOSTS = [ ]
 # CORS_ALLOW_ALL_ORIGINS = True
+=======
+# ALLOWED_HOSTS = [ 'ciclo3-api-backend.herokuapp.com' ]
+ALLOWED_HOSTS = [ ]
+CORS_ALLOW_ALL_ORIGINS = True
+>>>>>>> 123c85595bef066889badad8fcf83717121eaea8
 
 AUTH_USER_MODEL='authApp.User'
 
