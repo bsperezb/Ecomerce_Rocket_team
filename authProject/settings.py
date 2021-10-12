@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-9@8!mnp*fgz88!g)6cbc-!$l+dy_o0x2jesw)(q^q*jxp^h4pn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'ciclo3-api-backend.herokuapp.com' ]
+# ALLOWED_HOSTS = [ 'ciclo3-api-backend.herokuapp.com' ]
+ALLOWED_HOSTS = [ ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL='authApp.User'
 
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'authApp',
+    'corsheaders',
 
 ]
 
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
