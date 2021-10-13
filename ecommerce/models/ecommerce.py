@@ -1,11 +1,11 @@
-from typing_extensions import Required
+# from typing_extensions import Required
 from django.db import models
 from django.conf import settings
 
 class Item_Artesanias(models.Model):
     name = models.CharField(max_length=100)
     price = models.FloatField()
-    description = models.TextField(required=False)
+    description = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.title

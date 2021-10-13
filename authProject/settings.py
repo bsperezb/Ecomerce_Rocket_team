@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'authApp',
     'corsheaders',
     'ecommerce',
-    'django_extentions',
+    'django_extensions',
 
 ]
 
