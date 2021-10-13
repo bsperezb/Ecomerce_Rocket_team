@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'authApp',
     'corsheaders',
+    'ecommerce',
+    'django_extentions',
 
 ]
 
