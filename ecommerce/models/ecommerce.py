@@ -14,7 +14,7 @@ class OrderItem(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, 
                              on_delete=models.CASCADE)
     item = models.ForeignKey(Item_Artesanias, on_delete=models.CASCADE)
-    is_oredered = models.BooleanField(default=False)
+    is_ordered = models.BooleanField(default=False)
     quantity = models.IntegerField(default=1)
 
     def __str__(self):
