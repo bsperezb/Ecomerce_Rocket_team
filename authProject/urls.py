@@ -14,13 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
+from django.urls.conf import include
+
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 from authApp.views.userCreateView import UserCreateView 
 from authApp.views.userDetailView import UserDetailView 
+
+
+
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', UserCreateView.as_view()),
     path('user/<int:pk>/', UserDetailView.as_view()),
+    path('products/', include('ecommerce.routers')),
 ]
