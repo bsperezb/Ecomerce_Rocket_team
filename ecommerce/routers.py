@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from ecommerce.views.itemCreateView import ProductViewSet
+from ecommerce.views.products import ProductViewSet
 
 router = DefaultRouter()
 
