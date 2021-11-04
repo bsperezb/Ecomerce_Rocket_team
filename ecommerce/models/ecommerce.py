@@ -3,9 +3,20 @@ from django.db import models
 from django.conf import settings
 
 class Item_Artesanias(models.Model):
+    id = models.AutoField(primary_key = True)
     name = models.CharField(max_length=100)
+    state = models.BooleanField('Estado',default = True)
     price = models.FloatField()
     description = models.TextField(blank=True, null=True)
+    image = models.ImageField('Imagen del producto', upload_to='products', blank = True, null = True)
+    created_date = models.DateField('Fecha de Creación', auto_now_add=True)
+    modified_date = models.DateField('Fecha de Modificación', auto_now=True)
+    deleted_date = models.DateField('Fecha de Eliminación', auto_now=True, auto_now_add=False)
+    # TODO verificar deleted_date
+    # TODO image -> urlfield
+
+    class Meta:
+        ordering = [ '-created_date', '-modified_date']
 
     def __str__(self):
         return self.title
